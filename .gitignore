@@ -1,2 +1,4 @@
+# Ignore dotfiles (local tooling such as .claude/), except what the site needs.
 .*
 !.gitignore
+!.github/

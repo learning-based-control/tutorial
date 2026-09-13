@@ -207,7 +207,8 @@ main {
     background: var(--pale);
     border: 1px solid var(--border);
 }
-.person h3 { margin: 0; font-size: 1.2rem; }
+.person h4 { margin: 0; font-family: var(--font-display); font-weight: 500; font-size: 1.2rem; line-height: 1.15; }
+.people + h3 { margin-top: 2.5rem; }
 .person .affil {
     margin: 0.15rem 0 0.5rem;
     font-size: 0.95rem;

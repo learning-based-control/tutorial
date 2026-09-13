@@ -128,11 +128,6 @@ main {
     color: var(--cobalt);
     margin-bottom: 1rem;
 }
-.lede {
-    font-size: 1.2rem;
-    color: var(--ink-muted);
-    margin-top: 1.25rem;
-}
 .facts {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));

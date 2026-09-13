@@ -7,5 +7,5 @@ dashed underline. Replace the text and drop the span as each piece becomes
 real. Remove the `noindex` meta tag in `index.html` once the content is final,
 so search engines can index the site.
 
-Deployed to GitHub Pages by `.github/workflows/deploy.yml` on every push to
-`main`.
+GitHub Pages serves the `gh-pages` branch. `.github/workflows/deploy.yml` mirrors
+`main` onto it on every push, so only `main` is ever edited by hand.

@@ -203,29 +203,44 @@ main {
     padding: 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-    gap: 2rem 2.5rem;
+    gap: 2rem 2rem;
 }
 .person {
     display: grid;
-    grid-template-columns: 3.5rem 1fr;
+    grid-template-columns: 5rem 1fr;
     gap: 1rem;
-    align-items: start;
+    align-items: center;
 }
+.avatar-link { display: block; width: 5rem; height: 5rem; border-radius: 50%; }
 .avatar {
-    width: 3.5rem;
-    height: 3.5rem;
+    display: block;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
+    object-fit: cover;
     background: var(--pale);
     border: 1px solid var(--border);
+    transition: box-shadow 150ms ease, border-color 150ms ease;
 }
-.person h4 { margin: 0; font-family: var(--font-display); font-weight: 500; font-size: 1.2rem; line-height: 1.15; }
+.avatar-link:hover .avatar {
+    border-color: var(--cobalt-mid);
+    box-shadow: 0 0 0 2px var(--pale);
+}
+.person h4 { margin: 0; font-family: var(--font-display); font-weight: 500; font-size: 1.1rem; line-height: 1.15; }
+.person h4 a { color: var(--ink); text-decoration: none; }
+.person h4 a:hover {
+    color: var(--cobalt);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.15em;
+}
 .people + h3 { margin-top: 2.5rem; }
 .person .affil {
-    margin: 0.15rem 0 0.5rem;
-    font-size: 0.95rem;
+    margin: 0.5rem 0 0;
+    font-size: 0.875rem;
+    line-height: 1.45;
     color: var(--ink-muted);
 }
-.person p:last-child { margin: 0; font-size: 0.95rem; }
 
 /* Materials */
 .materials {

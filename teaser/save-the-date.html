@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Save the date</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600&display=swap');
+:root {
+    --white:#fff; --pale:#dbe9f2; --cobalt:#1d4f7f; --cobalt-mid:#4a7fab; --border:#d7e4ec;
+    --ink:#1c2b38; --ink-muted:#4a5d6b; --ink-faint:#6b7d89;
+    --display:'Crimson Pro', Georgia, serif; --sans:'Atkinson Hyperlegible', Helvetica, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--white); }
+body { font-family: var(--sans); color: var(--ink); }
+.card { position: relative; width: 1200px; height: 1200px; padding: 88px 96px 80px; overflow: hidden; display: flex; flex-direction: column; }
+.wide .card { height: 628px; padding: 48px 72px 44px; }
+.rule { position: absolute; left: 0; right: 0; top: 0; height: 6px; background: var(--cobalt); }
+.eyebrow { font-size: 22px; letter-spacing: .12em; text-transform: uppercase; color: var(--cobalt); margin: 0 0 28px; }
+.wide .eyebrow { font-size: 17px; margin-bottom: 10px; }
+h1 { font-family: var(--display); font-weight: 500; font-size: 84px; line-height: 1.05; letter-spacing: -.01em; margin: 0; max-width: 880px; }
+.wide h1 { font-size: 50px; max-width: 720px; }
+.sub { font-family: var(--display); font-weight: 400; font-size: 40px; line-height: 1.15; color: var(--ink-muted); margin: 18px 0 0; max-width: 860px; }
+.wide .sub { font-size: 25px; margin-top: 6px; max-width: 720px; }
+.facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; margin: 60px 0 0; max-width: 880px; }
+.wide .facts { margin-top: 22px; gap: 0 36px; max-width: 760px; }
+.facts div { border-top: 3px solid var(--cobalt); padding-top: 14px; }
+.wide .facts div { border-top-width: 2px; padding-top: 9px; }
+.facts dt { font-size: 18px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); margin: 0 0 8px; }
+.wide .facts dt { font-size: 14px; margin-bottom: 4px; }
+.facts dd { margin: 0; font-size: 28px; line-height: 1.35; }
+.wide .facts dd { font-size: 19px; line-height: 1.3; }
+.topics { margin: 44px 0 0; max-width: 880px; font-size: 24px; line-height: 1.45; color: var(--ink-muted); }
+.wide .topics { margin-top: 18px; font-size: 16px; max-width: 900px; }
+.topics b { display: block; font-size: 18px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 6px; }
+.wide .topics b { font-size: 13px; margin-bottom: 3px; }
+.people { margin-top: auto; display: flex; flex-direction: column; gap: 26px; }
+.wide .people { gap: 12px; }
+.row { display: flex; align-items: center; gap: 26px; }
+.wide .row { gap: 18px; }
+.avatars { display: flex; gap: 16px; flex: none; width: 584px; }
+.wide .avatars { gap: 10px; width: 350px; }
+.avatars img { border-radius: 50%; object-fit: cover; border: 2px solid var(--border); }
+.organizers img { width: 104px; height: 104px; }
+.contributors img { width: 84px; height: 84px; }
+.wide .organizers img { width: 62px; height: 62px; }
+.wide .contributors img { width: 50px; height: 50px; }
+.names { font-size: 21px; line-height: 1.4; color: var(--ink-muted); max-width: 560px; }
+.wide .names { font-size: 14.5px; line-height: 1.35; max-width: 620px; }
+.names b { display: block; font-weight: 700; font-size: 17px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 4px; }
+.wide .names b { font-size: 12.5px; margin-bottom: 2px; }
+.url { margin-top: 44px; font-size: 24px; color: var(--cobalt); }
+.wide .url { margin-top: 18px; font-size: 17px; }
+/* decorative band, right edge: structure (plus) at the top, data (dots) at the bottom */
+.band { position: absolute; top: 0; right: 0; height: 100%; width: 120px; }
+.wide .band { width: 96px; }
+.band .plus { fill: none; stroke: var(--cobalt-mid); stroke-width: 2; stroke-linecap: round; }
+.band .dot { fill: var(--cobalt-mid); }
+</style>
+</head>
+<body>
+<div class="card">
+    <div class="rule"></div>
+    <svg class="band" aria-hidden="true"><path class="plus"/><path class="dot"/></svg>
+    <p class="eyebrow">Save the date · Tutorial session · CDC 2026</p>
+    <h1>A Decade of <span style="white-space:nowrap">Learning-Based</span> Control</h1>
+    <p class="sub">From Theoretic Foundations to Practical Deployment</p>
+    <dl class="facts">
+        <div><dt>When</dt><dd>Tuesday, December 15, 2026<br>10:00 – 11:45 HST</dd></div>
+        <div><dt>Where</dt><dd>Room Coral 3-5<br>Hilton Hawaiian Village, Honolulu</dd></div>
+    </dl>
+    <p class="topics"><b>Topics</b>Stability and safety guarantees · Dynamics learning for control · Direct data-driven control · Reinforcement learning, imitation learning, and Bayesian optimization</p>
+    <div class="people">
+        <div class="row organizers">
+            <div class="avatars"><img src="../img/people/schoellig.jpg" alt=""><img src="../img/people/trimpe.jpg" alt=""><img src="../img/people/zeilinger.jpg" alt=""><img src="../img/people/mueller.jpg" alt=""><img src="../img/people/zhou.jpg" alt=""></div>
+            <div class="names"><b>Organizers</b>Angela P. Schoellig, Sebastian Trimpe, Melanie N. Zeilinger, Matthias A. Müller, and <span style="white-space:nowrap">SiQi Zhou</span></div>
+        </div>
+        <div class="row contributors">
+            <div class="avatars"><img src="../img/people/anand.jpg" alt=""><img src="../img/people/carron.jpg" alt=""><img src="../img/people/hausdoerfer.jpg" alt=""><img src="../img/people/lopez.jpg" alt=""><img src="../img/people/solowjow.jpg" alt=""><img src="../img/people/zhao.jpg" alt=""></div>
+            <div class="names"><b>Contributors</b>Mahathi Anand, Andrea Carron, Oliver Hausdörfer, Victor G. Lopez, Friedrich Solowjow, and <span style="white-space:nowrap">Haocheng Zhao</span></div>
+        </div>
+    </div>
+    <p class="url">learning-based-control.github.io/tutorial</p>
+</div>
+<script>
+(function () {
+    if (location.search.indexOf('wide') > -1) document.documentElement.classList.add('wide');
+    var svg = document.querySelector('.band'), W = svg.clientWidth, H = svg.clientHeight;
+    svg.setAttribute('width', W); svg.setAttribute('height', H);
+    var STEP = 14, ROWS = 3, ARM = 5.5, DOT = 2.4, p = [], d = [];
+    for (var row = 0; row < ROWS; row++) {
+        var x = W - 22 - row * STEP;
+        for (var y = 22; y <= H - 14; y += STEP) {
+            var t = Math.min(1, Math.max(0, (y / H - 0.08) / 0.84)), arm = ARM * (1 - t), rad = DOT * t;
+            if (arm > 0.6) p.push('M' + (x - arm) + ' ' + y + 'h' + (2 * arm) + 'M' + x + ' ' + (y - arm) + 'v' + (2 * arm));
+            if (rad > 0.5) d.push('M' + (x - rad) + ' ' + y + 'a' + rad + ' ' + rad + ' 0 1 0 ' + (2 * rad) + ' 0a' + rad + ' ' + rad + ' 0 1 0 ' + (-2 * rad) + ' 0');
+        }
+    }
+    svg.querySelector('.plus').setAttribute('d', p.join(''));
+    svg.querySelector('.dot').setAttribute('d', d.join(''));
+})();
+</script>
+</body>
+</html>

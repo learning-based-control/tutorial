@@ -45,6 +45,37 @@
         <section class="section" id="overview">
             <h2>Overview</h2>
             <p>Building on ten years of <a href="https://ics.mavt.ethz.ch/Events/learning-control-session.html" target="_blank" rel="noopener">Learning-Based Control Invited Sessions</a> at the IEEE Conference on Decision and Control (CDC), this tutorial reviews key advances at the intersection of machine learning and control. It focuses on methods that combine the flexibility of machine learning with the structure and theoretical foundations of control, with the goal of designing autonomous systems that are capable, reliable, and safe. The tutorial opens with core notions for establishing stability and safety guarantees, then reviews approaches that learn dynamics models to improve control under uncertainty, and turns to data-driven methods that synthesize or learn controllers directly from data, including direct data-driven control, reinforcement learning, imitation learning, and Bayesian optimization. It closes with a practical example and a discussion of open challenges. Throughout, the aim is to offer an accessible entry point to the field and to support continued progress toward reliable learning-based control in real-world systems. A companion tutorial paper, along with tutorial resources and codebases, is available for further reading and exploration (see <a href="#resources">Resources</a>).</p>
+            <figure class="scope">
+                <div class="scope-diagram">
+                    <div class="scope-inputs">
+                        <div class="scope-input scope-input--prior">Prior model</div>
+                        <svg class="scope-arrow" viewBox="0 0 40 16" aria-hidden="true"><path d="M1 8h33M28 2l6 6-6 6"/></svg>
+                        <div class="scope-input">Data</div>
+                        <svg class="scope-arrow" viewBox="0 0 40 16" aria-hidden="true"><path d="M1 8h33M28 2l6 6-6 6"/></svg>
+                    </div>
+                    <div class="scope-frame">
+                        <div class="scope-axis" aria-hidden="true"><span>structure</span><i></i><span>data</span></div>
+                        <ol class="scope-methods">
+                            <li><span class="t">Dynamics Learning for Control</span></li>
+                            <li><span class="t">Direct Data-Driven Control</span></li>
+                            <li><span class="t">Reinforcement Learning, Imitation Learning, and Bayesian Optimization</span></li>
+                        </ol>
+                        <div class="scope-guarantee"><span class="t">Closed-Loop Stability and Safety Guarantees</span></div>
+                    </div>
+                    <svg class="scope-arrow scope-arrow--out" viewBox="0 0 40 16" aria-hidden="true"><path d="M1 8h33M28 2l6 6-6 6"/></svg>
+                    <div class="scope-apps">
+                        <span class="t">Applications</span>
+                        <ul>
+                            <li>Robotics</li>
+                            <li>Healthcare</li>
+                            <li>Energy and power systems</li>
+                            <li>Process control</li>
+                            <li>…</li>
+                        </ul>
+                    </div>
+                </div>
+                <figcaption>Scope of the tutorial. Learning-based control combines prior models and data with control-theoretic structure. The tutorial first introduces foundations for closed-loop stability and safety guarantees, then covers methods ranging from structured dynamics learning to increasingly data-driven policy learning, and closes with representative applications.</figcaption>
+            </figure>
         </section>
 
         <section class="section" id="schedule">
@@ -246,5 +277,6 @@
             <p>&copy; CDC 2026 Learning-Based Control Tutorial.</p>
         </div>
     </footer>
+    <script src="scope.js" defer></script>
 </body>
 </html>

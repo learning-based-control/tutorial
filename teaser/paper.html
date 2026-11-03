@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tutorial paper teaser</title>
+<!-- Render: open as paper.html (square, 1200×1200) or paper.html?wide (1200×628), screenshot at 2x.
+     The diagram is the site's scope figure: same markup as index.html, styled by ../styles.css and drawn by ../scope.js. -->
+<link rel="stylesheet" href="../styles.css">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--white); }
+body { font-family: var(--font); color: var(--ink); }
+
+.card { position: relative; width: 1200px; height: 1200px; overflow: hidden; background: var(--white);
+        padding: 80px 88px 80px; display: flex; flex-direction: column; }
+.wide .card { height: 628px; padding: 40px 64px 40px; }
+.rule { position: absolute; left: 0; right: 0; top: 0; height: 6px; background: var(--cobalt); }
+
+.kicker { font-size: 22px; letter-spacing: .12em; text-transform: uppercase; color: var(--cobalt); margin: 0 0 20px; }
+.card h1 { font-family: var(--font-display); font-weight: 500; font-size: 78px; line-height: 1.02; letter-spacing: -.01em; margin: 0; max-width: 760px; }
+.sub { font-family: var(--font-display); font-weight: 400; font-size: 40px; line-height: 1.15; color: var(--ink-muted); margin: 16px 0 0; }
+.pitch { font-size: 24px; line-height: 1.45; color: var(--ink); margin: 22px 0 0; max-width: 960px; }
+
+/* diagram band: full-bleed pale field, the figure scaled up from its natural on-site width */
+.figure { position: relative; margin: 44px -88px 44px; padding: 32px 0; background: var(--pale); display: flex; justify-content: center; }
+.figure .scope { margin: 0; width: var(--dw); flex: none; transform-origin: top left; transform: scale(var(--ds));
+                 /* reserve the scaled footprint so the layout around it is right */
+                 margin-right: calc(var(--dw) * (var(--ds) - 1)); margin-bottom: calc(var(--dh, 0px) * (var(--ds) - 1)); }
+.figure .scope-methods li:nth-child(1) { background: color-mix(in srgb, var(--pale) 55%, var(--white)); }
+.figure .scope-methods li:nth-child(2) { background: color-mix(in srgb, var(--pale) 30%, var(--white)); }
+.figure .scope-methods li:nth-child(3) { background: var(--white); }
+.figure .scope-apps, .figure .scope-input { background: var(--white); }
+/* wrap the vertical guarantee label onto two lines so it no longer sets the figure's height */
+.figure .scope-guarantee .t { inline-size: 13em; }
+.card { --dw: 920px; --ds: 1.06; }
+
+.foot { margin-top: auto; }
+.label { display: block; font-weight: 700; font-size: 17px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 6px; }
+.authors { font-size: 19px; line-height: 1.45; color: var(--ink-muted); margin: 0; }
+.links { display: flex; gap: 56px; font-size: 22px; color: var(--cobalt); margin-top: 24px; }
+.links b { font-weight: 700; }
+.authors .nm { white-space: nowrap; }
+
+/* ---------- wide ---------- */
+.wide .kicker { font-size: 16px; margin-bottom: 10px; }
+.wide .card h1 { font-size: 46px; white-space: nowrap; }
+.wide .sub { font-size: 26px; margin-top: 4px; }
+.wide .pitch { display: none; }
+.wide .figure { margin: 20px -64px 20px; padding: 14px 0; }
+.wide .card { --dw: 960px; --ds: 0.825; }
+.wide .label { font-size: 12.5px; margin-bottom: 3px; }
+.wide .authors { font-size: 14.5px; line-height: 1.4; }
+.wide .links { font-size: 16px; gap: 40px; margin-top: 10px; }
+.wide .links .label { display: inline; margin: 0 8px 0 0; }
+</style>
+<script>if (location.search.indexOf('wide') > -1) document.documentElement.classList.add('wide');</script>
+</head>
+<body>
+<div class="card">
+    <div class="rule"></div>
+    <p class="kicker">New tutorial paper · CDC 2026 · arXiv:2610.29187</p>
+    <h1>A Decade of <span style="white-space:nowrap">Learning-Based</span> Control</h1>
+    <p class="sub">From Theoretic Foundations to Practical Deployment</p>
+    <p class="pitch">Combining the flexibility of machine learning with the structure and theoretical foundations of control to design autonomous systems that are capable, reliable, and safe.</p>
+
+    <div class="figure">
+        <figure class="scope">
+            <div class="scope-diagram">
+                <div class="scope-inputs">
+                    <div class="scope-input scope-input--prior">Prior model</div>
+                    <svg class="scope-arrow" viewBox="0 0 40 16" aria-hidden="true"><path d="M1 8h33M28 2l6 6-6 6"/></svg>
+                    <div class="scope-input">Data</div>
+                    <svg class="scope-arrow" viewBox="0 0 40 16" aria-hidden="true"><path d="M1 8h33M28 2l6 6-6 6"/></svg>
+                </div>
+                <div class="scope-frame">
+                    <div class="scope-axis" aria-hidden="true"><span>structure</span><i></i><span>data</span></div>
+                    <ol class="scope-methods">
+                        <li><span class="t">Dynamics Learning for Control</span></li>
+                        <li><span class="t">Direct Data-Driven Control</span></li>
+                        <li><span class="t">Reinforcement Learning, Imitation Learning, and Bayesian Optimization</span></li>
+                    </ol>
+                    <div class="scope-guarantee"><span class="t">Closed-Loop Stability and Safety Guarantees</span></div>
+                </div>
+                <svg class="scope-arrow scope-arrow--out" viewBox="0 0 40 16" aria-hidden="true"><path d="M1 8h33M28 2l6 6-6 6"/></svg>
+                <div class="scope-apps">
+                    <span class="t">Applications</span>
+                    <ul>
+                        <li>Robotics</li>
+                        <li>Healthcare</li>
+                        <li>Energy and power systems</li>
+                        <li>Process control</li>
+                        <li>…</li>
+                    </ul>
+                </div>
+            </div>
+        </figure>
+    </div>
+
+    <div class="foot">
+        <p class="authors"><span class="label">Authors</span><span class="nm">Angela P. Schoellig</span>, <span class="nm">Matthias A. Müller</span>, <span class="nm">Sebastian Trimpe</span>, <span class="nm">Melanie N. Zeilinger</span>, <span class="nm">Mahathi Anand</span>, <span class="nm">Andrea Carron</span>, <span class="nm">Oliver Hausdörfer</span>, <span class="nm">Victor G. Lopez</span>, <span class="nm">Friedrich Solowjow</span>, <span class="nm">Haocheng Zhao</span>, and <span class="nm">SiQi Zhou</span></p>
+        <div class="links">
+            <span><span class="label">Paper</span>https://arxiv.org/abs/2610.29187</span>
+            <span><span class="label">Website</span>https://learning-based-control.github.io/tutorial</span>
+        </div>
+    </div>
+</div>
+<script src="../scope.js"></script>
+<script>
+// tell the CSS the figure's natural height so the scaled footprint is reserved correctly
+var s = document.querySelector('.figure .scope');
+s.style.setProperty('--dh', s.offsetHeight + 'px');
+</script>
+</body>
+</html>
